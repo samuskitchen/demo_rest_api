@@ -79,7 +79,7 @@ public class StudentController {
       @ApiResponse(code = 500, message = "Internal Server Error")})
     public ResponseEntity<Student> findById(@RequestParam(name = "id") Long idStudent) {
         return ResponseEntity.ok(studentService.findById(idStudent)
-          .orElseThrow(() -> new StudentRequestException("No encontro Estudiante")));
+          .orElseThrow(() -> new StudentRequestException("No se encontro el estudiante")));
     }
 
 }
